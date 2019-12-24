@@ -37,7 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		190F71AFA53126B0BFECC150 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		190F71AFA53126B0BFECC150 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		45EE805D9ACF76DAA64350A4 /* Pods-FPPermission_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPPermission_Example.debug.xcconfig"; path = "Target Support Files/Pods-FPPermission_Example/Pods-FPPermission_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		500BE3929127D5F9BF8A957A /* Pods-FPPermission_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPPermission_Tests.debug.xcconfig"; path = "Target Support Files/Pods-FPPermission_Tests/Pods-FPPermission_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C16BB805CC1D1837EF50CBA /* Pods_FPPermission_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPPermission_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,10 +63,10 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A1E6132831B1ED9E3C2866B /* Pods_FPPermission_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPPermission_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8FE5BBCFEDA402F501074D93 /* FPPermission.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = FPPermission.podspec; path = ../FPPermission.podspec; sourceTree = "<group>"; };
+		8FE5BBCFEDA402F501074D93 /* FPPermission.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FPPermission.podspec; path = ../FPPermission.podspec; sourceTree = "<group>"; };
 		97AA980D9CD1C797A63982E3 /* Pods-FPPermission_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPPermission_Example.release.xcconfig"; path = "Target Support Files/Pods-FPPermission_Example/Pods-FPPermission_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B9DB2DC2126068F67123C7CE /* Pods-FPPermission_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FPPermission_Tests.release.xcconfig"; path = "Target Support Files/Pods-FPPermission_Tests/Pods-FPPermission_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		EB63A823C8FF75A1E2AE1E47 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		EB63A823C8FF75A1E2AE1E47 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				500BE3929127D5F9BF8A957A /* Pods-FPPermission_Tests.debug.xcconfig */,
 				B9DB2DC2126068F67123C7CE /* Pods-FPPermission_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

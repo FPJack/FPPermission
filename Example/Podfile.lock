@@ -1,0 +1,16 @@
+PODS:
+  - FPPermission (0.1.0)
+
+DEPENDENCIES:
+  - FPPermission (from `../`)
+
+EXTERNAL SOURCES:
+  FPPermission:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  FPPermission: cdfb348be8406c9649a6fb1db1aca760632d3524
+
+PODFILE CHECKSUM: 1016decce02132e6f0dfbe92d9b25d3dc9bc69a4
+
+COCOAPODS: 1.8.4

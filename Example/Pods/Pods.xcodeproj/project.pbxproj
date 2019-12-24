@@ -1,0 +1,804 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23206B87EBD09A14BF0A57539D5A908C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		459C49D5136E1F179FB38D680C4B8330 /* Pods-FPPermission_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 23EC9303AEC1BC6B53C9B7937C9A426B /* Pods-FPPermission_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		499CCCA0169465DE88A911EF2DDD12E8 /* FPPermission-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C87D9412AD60AB2A4FD36FA214F3E94 /* FPPermission-dummy.m */; };
+		5332EE6945FA45898E59A0F9CA03A725 /* Pods-FPPermission_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6352665E2AA6DA99921120B342F8D8F /* Pods-FPPermission_Example-dummy.m */; };
+		57BEC59D0E08B1435E71D8AE7E2DEEDA /* FPOpenCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = E29554CD2584B7939D6178127D55B3E2 /* FPOpenCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		676E265A9FDA75A276AF4892880F9B19 /* FPLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C6FB362F13B68A70EC4061C56104E2 /* FPLocationManager.m */; };
+		6DB98E84B4F8303CE69FCF9E92068857 /* FPOpenCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 927D61FD56A00A50024B9BB566116DB6 /* FPOpenCamera.m */; };
+		8B35BA86EB277BBAAD73DE6C9D358074 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		A177DC2A44EAA0667CB82AB8F024087B /* FPPermission-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 84BEE8240B4675D6A0CF1CF6AF3E7D80 /* FPPermission-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9971652C3E6E6B2FD6FB583361FFE6E /* Pods-FPPermission_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BBF03D291BCE9B06B3B71AAABD2D6F12 /* Pods-FPPermission_Tests-dummy.m */; };
+		BF4369EAD207A646D72E53E542ED96EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		C2AB237F8E9B5B564C2A60189E69B077 /* FPLocationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = E6C892ED949178983855EB0B2480641F /* FPLocationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2FAB54DBDA56CCAC067441ABEC139C3 /* FPVideoEditVC.m in Sources */ = {isa = PBXBuildFile; fileRef = C95580F81FA548FAF56876888139477C /* FPVideoEditVC.m */; };
+		C5405665AC29F2208FC27D40E6D3C613 /* Pods-FPPermission_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 994C69B46967B429ED358D164A706787 /* Pods-FPPermission_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7E595FD3A20270A0A5B6AEC86697A1B /* FPBlueToothDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 70E978AB51F70D4F667A89B6D0B197FF /* FPBlueToothDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8D8E789AD01D24FE99B13CCAC1D4680 /* FPPermission.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADD1775DF46871ED879FEB45FD539D5 /* FPPermission.m */; };
+		C9E05CFE100D9750EE0733B0DD67FBB6 /* FPBlueToothDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 22F02EFA0829970C49F72AADA4318765 /* FPBlueToothDelegate.m */; };
+		DDDEF75453C9BE3BD9A8816B30DF17C6 /* FPVideoEditVC.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C244F03A832035C13C079375CB8EF9F /* FPVideoEditVC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F5C6B88473B63059BBA53C5FA10A8CF4 /* FPPermission.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C34FC1DCD5A30C33B07D338CE7239BA /* FPPermission.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2EEDE0C5750560A78259FEFF54AC0C8B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C00F6703B4B3168B1FCCBDCC86418132;
+			remoteInfo = "Pods-FPPermission_Example";
+		};
+		33FC9602D721172141B9BBA7CA681AA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 82B9A8AE3DDFA4F4275ED8C4B85A6395;
+			remoteInfo = FPPermission;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C87D9412AD60AB2A4FD36FA214F3E94 /* FPPermission-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FPPermission-dummy.m"; sourceTree = "<group>"; };
+		1207F7287F1F89A1EF043FB3C5C1AFFF /* FPPermission-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FPPermission-prefix.pch"; sourceTree = "<group>"; };
+		1ADD1775DF46871ED879FEB45FD539D5 /* FPPermission.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPPermission.m; path = FPPermission/Classes/FPPermission.m; sourceTree = "<group>"; };
+		1C244F03A832035C13C079375CB8EF9F /* FPVideoEditVC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPVideoEditVC.h; path = FPPermission/Classes/FPVideoEditVC.h; sourceTree = "<group>"; };
+		1E7EB3C12CCAF79180967460EBD80975 /* Pods-FPPermission_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FPPermission_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		22F02EFA0829970C49F72AADA4318765 /* FPBlueToothDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPBlueToothDelegate.m; path = FPPermission/Classes/FPBlueToothDelegate.m; sourceTree = "<group>"; };
+		23EC9303AEC1BC6B53C9B7937C9A426B /* Pods-FPPermission_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FPPermission_Tests-umbrella.h"; sourceTree = "<group>"; };
+		2ACB6B9B74373575305F56EC86CB33AF /* Pods-FPPermission_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FPPermission_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2D49281EF7E6959076D4A491B4DAB4E1 /* Pods_FPPermission_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPPermission_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		33C6FB362F13B68A70EC4061C56104E2 /* FPLocationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPLocationManager.m; path = FPPermission/Classes/FPLocationManager.m; sourceTree = "<group>"; };
+		41634FDD63CC0783250ADACCCBBA2C7A /* Pods-FPPermission_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FPPermission_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		58751817FE487B82A7E7F232C052FBFC /* Pods-FPPermission_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FPPermission_Example-Info.plist"; sourceTree = "<group>"; };
+		58C33BE37174C4B79F8CB629B6E0FADE /* Pods-FPPermission_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FPPermission_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		5C8DE5B40E096B0A07EEFCE1FDB0D6A8 /* Pods-FPPermission_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FPPermission_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		63B57E981EC9D6415813906854299A66 /* Pods-FPPermission_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FPPermission_Example-frameworks.sh"; sourceTree = "<group>"; };
+		70E978AB51F70D4F667A89B6D0B197FF /* FPBlueToothDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPBlueToothDelegate.h; path = FPPermission/Classes/FPBlueToothDelegate.h; sourceTree = "<group>"; };
+		7208292623C451DE2957900E50F9DD8D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		83C93A3567E66A523F8629628EF58FF1 /* Pods-FPPermission_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FPPermission_Tests-Info.plist"; sourceTree = "<group>"; };
+		84BEE8240B4675D6A0CF1CF6AF3E7D80 /* FPPermission-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FPPermission-umbrella.h"; sourceTree = "<group>"; };
+		927D61FD56A00A50024B9BB566116DB6 /* FPOpenCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPOpenCamera.m; path = FPPermission/Classes/FPOpenCamera.m; sourceTree = "<group>"; };
+		9734C2B81F044C52883EE730BE6353B2 /* Pods-FPPermission_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FPPermission_Example.release.xcconfig"; sourceTree = "<group>"; };
+		97A5A3836F3C18DBA3CEB5AA265390E8 /* Pods-FPPermission_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FPPermission_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		994C69B46967B429ED358D164A706787 /* Pods-FPPermission_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FPPermission_Example-umbrella.h"; sourceTree = "<group>"; };
+		9B0D013ECD9A46D7D82CDCCC0E83335C /* FPPermission.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FPPermission.xcconfig; sourceTree = "<group>"; };
+		9C34FC1DCD5A30C33B07D338CE7239BA /* FPPermission.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPPermission.h; path = FPPermission/Classes/FPPermission.h; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AC7064511F1F57CAB368C29D5C22827E /* Pods_FPPermission_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FPPermission_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B06A3EE6202D8BFB660CB3D6882E4BCE /* FPPermission.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FPPermission.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF03D291BCE9B06B3B71AAABD2D6F12 /* Pods-FPPermission_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FPPermission_Tests-dummy.m"; sourceTree = "<group>"; };
+		C6352665E2AA6DA99921120B342F8D8F /* Pods-FPPermission_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FPPermission_Example-dummy.m"; sourceTree = "<group>"; };
+		C8AB3A269400DBF69D1C150A395024F6 /* Pods-FPPermission_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FPPermission_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C95580F81FA548FAF56876888139477C /* FPVideoEditVC.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FPVideoEditVC.m; path = FPPermission/Classes/FPVideoEditVC.m; sourceTree = "<group>"; };
+		CEF7D617C990725FDAEA7CC3A46A6963 /* FPPermission.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = FPPermission.podspec; sourceTree = "<group>"; tabWidth = 2; };
+		D34C322345B2E73399DCC13E4A30BB03 /* Pods-FPPermission_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FPPermission_Tests.modulemap"; sourceTree = "<group>"; };
+		D933B3D2FF65346CF883D4860086B1C5 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E29554CD2584B7939D6178127D55B3E2 /* FPOpenCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPOpenCamera.h; path = FPPermission/Classes/FPOpenCamera.h; sourceTree = "<group>"; };
+		E6C892ED949178983855EB0B2480641F /* FPLocationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FPLocationManager.h; path = FPPermission/Classes/FPLocationManager.h; sourceTree = "<group>"; };
+		F0130DA862E848C65584CEBF168CAEE4 /* FPPermission-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FPPermission-Info.plist"; sourceTree = "<group>"; };
+		F212D94974739AF73E3AED116B6FE2E1 /* Pods-FPPermission_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FPPermission_Example.modulemap"; sourceTree = "<group>"; };
+		F9F209DDFC2561B8C8C70D7714B9CFE4 /* FPPermission.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FPPermission.modulemap; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D6813609A95F58EA7754D9AC201E80D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23206B87EBD09A14BF0A57539D5A908C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8673FF093106E3DE7E4A2EC0DF2FABEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B35BA86EB277BBAAD73DE6C9D358074 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B1022023DD360713385C00AC02997EB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF4369EAD207A646D72E53E542ED96EC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D43D2605A1E3EE99CAC9DBBF82C749E /* FPPermission */ = {
+			isa = PBXGroup;
+			children = (
+				70E978AB51F70D4F667A89B6D0B197FF /* FPBlueToothDelegate.h */,
+				22F02EFA0829970C49F72AADA4318765 /* FPBlueToothDelegate.m */,
+				E29554CD2584B7939D6178127D55B3E2 /* FPOpenCamera.h */,
+				927D61FD56A00A50024B9BB566116DB6 /* FPOpenCamera.m */,
+				9C34FC1DCD5A30C33B07D338CE7239BA /* FPPermission.h */,
+				1ADD1775DF46871ED879FEB45FD539D5 /* FPPermission.m */,
+				1C244F03A832035C13C079375CB8EF9F /* FPVideoEditVC.h */,
+				C95580F81FA548FAF56876888139477C /* FPVideoEditVC.m */,
+				E6C892ED949178983855EB0B2480641F /* FPLocationManager.h */,
+				33C6FB362F13B68A70EC4061C56104E2 /* FPLocationManager.m */,
+				A8A405C4823D5505AFF51C8E4E27F85C /* Pod */,
+				35D5A6A564631264387EA8BF952211AD /* Support Files */,
+			);
+			name = FPPermission;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		35D5A6A564631264387EA8BF952211AD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F9F209DDFC2561B8C8C70D7714B9CFE4 /* FPPermission.modulemap */,
+				9B0D013ECD9A46D7D82CDCCC0E83335C /* FPPermission.xcconfig */,
+				0C87D9412AD60AB2A4FD36FA214F3E94 /* FPPermission-dummy.m */,
+				F0130DA862E848C65584CEBF168CAEE4 /* FPPermission-Info.plist */,
+				1207F7287F1F89A1EF043FB3C5C1AFFF /* FPPermission-prefix.pch */,
+				84BEE8240B4675D6A0CF1CF6AF3E7D80 /* FPPermission-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/FPPermission";
+			sourceTree = "<group>";
+		};
+		4A574D01C31662446DEE4D04186B0735 /* Pods-FPPermission_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D34C322345B2E73399DCC13E4A30BB03 /* Pods-FPPermission_Tests.modulemap */,
+				58C33BE37174C4B79F8CB629B6E0FADE /* Pods-FPPermission_Tests-acknowledgements.markdown */,
+				97A5A3836F3C18DBA3CEB5AA265390E8 /* Pods-FPPermission_Tests-acknowledgements.plist */,
+				BBF03D291BCE9B06B3B71AAABD2D6F12 /* Pods-FPPermission_Tests-dummy.m */,
+				83C93A3567E66A523F8629628EF58FF1 /* Pods-FPPermission_Tests-Info.plist */,
+				23EC9303AEC1BC6B53C9B7937C9A426B /* Pods-FPPermission_Tests-umbrella.h */,
+				1E7EB3C12CCAF79180967460EBD80975 /* Pods-FPPermission_Tests.debug.xcconfig */,
+				2ACB6B9B74373575305F56EC86CB33AF /* Pods-FPPermission_Tests.release.xcconfig */,
+			);
+			name = "Pods-FPPermission_Tests";
+			path = "Target Support Files/Pods-FPPermission_Tests";
+			sourceTree = "<group>";
+		};
+		5CAA81D66384A300ECEE1BB352D0A4B5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B06A3EE6202D8BFB660CB3D6882E4BCE /* FPPermission.framework */,
+				AC7064511F1F57CAB368C29D5C22827E /* Pods_FPPermission_Example.framework */,
+				2D49281EF7E6959076D4A491B4DAB4E1 /* Pods_FPPermission_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9447002E257784E12B262C7F9FCDF70A /* Pods-FPPermission_Example */ = {
+			isa = PBXGroup;
+			children = (
+				F212D94974739AF73E3AED116B6FE2E1 /* Pods-FPPermission_Example.modulemap */,
+				C8AB3A269400DBF69D1C150A395024F6 /* Pods-FPPermission_Example-acknowledgements.markdown */,
+				5C8DE5B40E096B0A07EEFCE1FDB0D6A8 /* Pods-FPPermission_Example-acknowledgements.plist */,
+				C6352665E2AA6DA99921120B342F8D8F /* Pods-FPPermission_Example-dummy.m */,
+				63B57E981EC9D6415813906854299A66 /* Pods-FPPermission_Example-frameworks.sh */,
+				58751817FE487B82A7E7F232C052FBFC /* Pods-FPPermission_Example-Info.plist */,
+				994C69B46967B429ED358D164A706787 /* Pods-FPPermission_Example-umbrella.h */,
+				41634FDD63CC0783250ADACCCBBA2C7A /* Pods-FPPermission_Example.debug.xcconfig */,
+				9734C2B81F044C52883EE730BE6353B2 /* Pods-FPPermission_Example.release.xcconfig */,
+			);
+			name = "Pods-FPPermission_Example";
+			path = "Target Support Files/Pods-FPPermission_Example";
+			sourceTree = "<group>";
+		};
+		9BD363DD79D0CD6353AE9988B63D486E /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D43D2605A1E3EE99CAC9DBBF82C749E /* FPPermission */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		A8A405C4823D5505AFF51C8E4E27F85C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				CEF7D617C990725FDAEA7CC3A46A6963 /* FPPermission.podspec */,
+				7208292623C451DE2957900E50F9DD8D /* LICENSE */,
+				D933B3D2FF65346CF883D4860086B1C5 /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C20BA411EF44C95E623EFC490C3589ED /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9447002E257784E12B262C7F9FCDF70A /* Pods-FPPermission_Example */,
+				4A574D01C31662446DEE4D04186B0735 /* Pods-FPPermission_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				9BD363DD79D0CD6353AE9988B63D486E /* Development Pods */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				5CAA81D66384A300ECEE1BB352D0A4B5 /* Products */,
+				C20BA411EF44C95E623EFC490C3589ED /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		343FFF931DC0C47E233B9991BD180B76 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7E595FD3A20270A0A5B6AEC86697A1B /* FPBlueToothDelegate.h in Headers */,
+				57BEC59D0E08B1435E71D8AE7E2DEEDA /* FPOpenCamera.h in Headers */,
+				A177DC2A44EAA0667CB82AB8F024087B /* FPPermission-umbrella.h in Headers */,
+				F5C6B88473B63059BBA53C5FA10A8CF4 /* FPPermission.h in Headers */,
+				DDDEF75453C9BE3BD9A8816B30DF17C6 /* FPVideoEditVC.h in Headers */,
+				C2AB237F8E9B5B564C2A60189E69B077 /* FPLocationManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4BD932BC49282B77CB76DEF35F77CDDB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C5405665AC29F2208FC27D40E6D3C613 /* Pods-FPPermission_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC126AC7C3F4F00F28419366AA8EFAE0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				459C49D5136E1F179FB38D680C4B8330 /* Pods-FPPermission_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		02A5B6DFD7B5127126984CD543750668 /* Pods-FPPermission_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B415F039BF80A28696F654068B2F182E /* Build configuration list for PBXNativeTarget "Pods-FPPermission_Tests" */;
+			buildPhases = (
+				EC126AC7C3F4F00F28419366AA8EFAE0 /* Headers */,
+				4D6F109ADED08AC46D8AD63F0BAFC769 /* Sources */,
+				8673FF093106E3DE7E4A2EC0DF2FABEA /* Frameworks */,
+				7FA32E156DF8F31D03F2FA49402C711C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00A8F541E0D08034765BCEB48B8FA8BC /* PBXTargetDependency */,
+			);
+			name = "Pods-FPPermission_Tests";
+			productName = "Pods-FPPermission_Tests";
+			productReference = 2D49281EF7E6959076D4A491B4DAB4E1 /* Pods_FPPermission_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		82B9A8AE3DDFA4F4275ED8C4B85A6395 /* FPPermission */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2443E959878D93081F40913234A96134 /* Build configuration list for PBXNativeTarget "FPPermission" */;
+			buildPhases = (
+				343FFF931DC0C47E233B9991BD180B76 /* Headers */,
+				A46BB6CB59EB7D0B8E8D893FD9806120 /* Sources */,
+				B1022023DD360713385C00AC02997EB6 /* Frameworks */,
+				1E75568AF2C0959D5A73C420A59000EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FPPermission;
+			productName = FPPermission;
+			productReference = B06A3EE6202D8BFB660CB3D6882E4BCE /* FPPermission.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C00F6703B4B3168B1FCCBDCC86418132 /* Pods-FPPermission_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9502CB638E689EA14ABCE9253C4B3243 /* Build configuration list for PBXNativeTarget "Pods-FPPermission_Example" */;
+			buildPhases = (
+				4BD932BC49282B77CB76DEF35F77CDDB /* Headers */,
+				8314B31D86D0BB8EDE2A482B5FF56BD0 /* Sources */,
+				4D6813609A95F58EA7754D9AC201E80D /* Frameworks */,
+				EE87971E685B5D773C6D627FA6525E6D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5FED11BF51EC7C3D10A4EAEC73BB2DF8 /* PBXTargetDependency */,
+			);
+			name = "Pods-FPPermission_Example";
+			productName = "Pods-FPPermission_Example";
+			productReference = AC7064511F1F57CAB368C29D5C22827E /* Pods_FPPermission_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 5CAA81D66384A300ECEE1BB352D0A4B5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				82B9A8AE3DDFA4F4275ED8C4B85A6395 /* FPPermission */,
+				C00F6703B4B3168B1FCCBDCC86418132 /* Pods-FPPermission_Example */,
+				02A5B6DFD7B5127126984CD543750668 /* Pods-FPPermission_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1E75568AF2C0959D5A73C420A59000EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FA32E156DF8F31D03F2FA49402C711C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE87971E685B5D773C6D627FA6525E6D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D6F109ADED08AC46D8AD63F0BAFC769 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9971652C3E6E6B2FD6FB583361FFE6E /* Pods-FPPermission_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8314B31D86D0BB8EDE2A482B5FF56BD0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5332EE6945FA45898E59A0F9CA03A725 /* Pods-FPPermission_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A46BB6CB59EB7D0B8E8D893FD9806120 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9E05CFE100D9750EE0733B0DD67FBB6 /* FPBlueToothDelegate.m in Sources */,
+				6DB98E84B4F8303CE69FCF9E92068857 /* FPOpenCamera.m in Sources */,
+				499CCCA0169465DE88A911EF2DDD12E8 /* FPPermission-dummy.m in Sources */,
+				C8D8E789AD01D24FE99B13CCAC1D4680 /* FPPermission.m in Sources */,
+				C2FAB54DBDA56CCAC067441ABEC139C3 /* FPVideoEditVC.m in Sources */,
+				676E265A9FDA75A276AF4892880F9B19 /* FPLocationManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00A8F541E0D08034765BCEB48B8FA8BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-FPPermission_Example";
+			target = C00F6703B4B3168B1FCCBDCC86418132 /* Pods-FPPermission_Example */;
+			targetProxy = 2EEDE0C5750560A78259FEFF54AC0C8B /* PBXContainerItemProxy */;
+		};
+		5FED11BF51EC7C3D10A4EAEC73BB2DF8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FPPermission;
+			target = 82B9A8AE3DDFA4F4275ED8C4B85A6395 /* FPPermission */;
+			targetProxy = 33FC9602D721172141B9BBA7CA681AA8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		04FF8ED59F25128B68626A4F6CA7A6BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9734C2B81F044C52883EE730BE6353B2 /* Pods-FPPermission_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FPPermission_Example/Pods-FPPermission_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FPPermission_Example/Pods-FPPermission_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		7876D0C368B170E7788C10887A31797D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E7EB3C12CCAF79180967460EBD80975 /* Pods-FPPermission_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FPPermission_Tests/Pods-FPPermission_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FPPermission_Tests/Pods-FPPermission_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7EF7227D9B20A1D549000096ACCB23D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		8FDB4C5F467A6EB04B5830178F05C9E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ACB6B9B74373575305F56EC86CB33AF /* Pods-FPPermission_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FPPermission_Tests/Pods-FPPermission_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FPPermission_Tests/Pods-FPPermission_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		93791A2F3A2DBF827B0A8512168E9BA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41634FDD63CC0783250ADACCCBBA2C7A /* Pods-FPPermission_Example.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FPPermission_Example/Pods-FPPermission_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FPPermission_Example/Pods-FPPermission_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DD432BADDADBC763F59723B144E000F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B0D013ECD9A46D7D82CDCCC0E83335C /* FPPermission.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FPPermission/FPPermission-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FPPermission/FPPermission-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FPPermission/FPPermission.modulemap";
+				PRODUCT_MODULE_NAME = FPPermission;
+				PRODUCT_NAME = FPPermission;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F36B99801950738B8C41AD8F2BCC0023 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B0D013ECD9A46D7D82CDCCC0E83335C /* FPPermission.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/FPPermission/FPPermission-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FPPermission/FPPermission-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FPPermission/FPPermission.modulemap";
+				PRODUCT_MODULE_NAME = FPPermission;
+				PRODUCT_NAME = FPPermission;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2443E959878D93081F40913234A96134 /* Build configuration list for PBXNativeTarget "FPPermission" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DD432BADDADBC763F59723B144E000F4 /* Debug */,
+				F36B99801950738B8C41AD8F2BCC0023 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EF7227D9B20A1D549000096ACCB23D7 /* Debug */,
+				4BE66A09A74FD25164AAB3C2645B9B93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9502CB638E689EA14ABCE9253C4B3243 /* Build configuration list for PBXNativeTarget "Pods-FPPermission_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93791A2F3A2DBF827B0A8512168E9BA4 /* Debug */,
+				04FF8ED59F25128B68626A4F6CA7A6BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B415F039BF80A28696F654068B2F182E /* Build configuration list for PBXNativeTarget "Pods-FPPermission_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7876D0C368B170E7788C10887A31797D /* Debug */,
+				8FDB4C5F467A6EB04B5830178F05C9E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
