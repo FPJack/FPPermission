@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'FPPermission_Example' do
+  pod 'FPPermission', :path => '../'
+
+  target 'FPPermission_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
