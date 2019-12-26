@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    self.sources = @[@(FPPermissionCamer),@(FPPermissionPhoto),@(FPPermissionLocation),@(FPPermissionBluetooth)];
+    self.sources = @[@(FPPermissionCamer),@(FPPermissionPhoto),@(FPPermissionLocationAlways),@(FPPermissionLocationWhenInUse),@(FPPermissionBluetooth),@(FPPermissionMicrophone)];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

@@ -24,7 +24,11 @@
 @property (nonatomic,assign)CGFloat longitude;
 @end
 @interface FPLocationManager : NSObject
+
 + (instancetype)manager;
+- (void)requestAlwaysAuthorization;
+- (void)requestWhenInUseAuthorization;
+
 /// 开始定位
 - (void)startLocationObserver:(FPLocationObject *)observer;
 
@@ -39,6 +43,7 @@
 @property (nonatomic, copy) void (^failureBlock)(NSError *error);
 /// 权限改变的回调block
 @property (nonatomic, copy) void (^didChangeAuthorizationStatusBlock)(CLAuthorizationStatus status);
+
 + (void)startLocationWithSuccessBlock:(void (^)(NSArray<CLLocation *> *locations))successBlock failureBlock:(void (^)(NSError *error))failureBlock geocoderBlock:(void (^)(NSArray *geocoderArray,LocationModel *locationModel))geocoderBlock;
 + (void)startLocationWithGeocoderBlock:(void (^)(NSArray *geocoderArray,LocationModel *locationModel))geocoderBlock failureBlock:(void (^)(NSError *error))failureBlock;
 + (void)startLocationWithDidChangeAuthorizationStatusBlock:(void (^)(CLAuthorizationStatus status))didChangeAuthorizationStatusBlock;

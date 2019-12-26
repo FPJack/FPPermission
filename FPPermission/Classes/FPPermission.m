@@ -31,8 +31,12 @@ typedef void (^StatusBlock)(FPPermissionStatus);
         [self cameraAuthorizationShowAlertWhenDenied:alert result:block];
     }else if (type == FPPermissionPhoto){
         [self photoAuthorizationShowAlertWhenDenied:alert result:block];
-    }else if (type == FPPermissionLocation){
-        [self loacationAuthorizationShowAlertWhenDenied:alert result:block];
+    }else if (type == FPPermissionMicrophone){
+        [self microphoneAuthorizationShowAlertWhenDenied:alert result:block];
+    }else if (type == FPPermissionLocationAlways){
+        [self loacationAuthorizationShowAlertWhenDenied:alert permissionType:type result:block];
+    }else if (type == FPPermissionLocationWhenInUse){
+        [self loacationAuthorizationShowAlertWhenDenied:alert permissionType:type result:block];
     }else if (type == FPPermissionBluetooth){
         [self bluetoothAuthorizationShowAlertWhenDenied:alert result:block];
     }
@@ -67,18 +71,44 @@ typedef void (^StatusBlock)(FPPermissionStatus);
         if (block) block(FPPermissionStatusAuthorized);
     }
 }
-+ (void)loacationAuthorizationShowAlertWhenDenied:(BOOL)alert result:(CallBackBlock)block{
-    FPPermissionStatus status = [self mapStatus:FPPermissionLocation];
++ (void)microphoneAuthorizationShowAlertWhenDenied:(BOOL)alert result:(CallBackBlock)block{
+    FPPermissionStatus status = [self mapStatus:FPPermissionMicrophone];
     if (status == FPPermissionStatusNotDetermined) {
-        [FPLocationObject startLocationWithDidChangeAuthorizationStatusBlock:^(CLAuthorizationStatus status) {
+        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                if (block) block([self mapStatus:FPPermissionLocation]);
+                if (block) block([self mapStatus:FPPermissionMicrophone]);
             });
         }];
     }else if (status == FPPermissionStatusDenied || status == FPPermissionStatusRestricted){
-        if(alert) [self manaulShowAuthorization:FPPermissionLocation];
+        if (alert) [self manaulShowAuthorization:FPPermissionMicrophone];
         if (block) block(status);
-    }else if (status == FPPermissionStatusAuthorized ||status == \
+    }else if (status == FPPermissionStatusAuthorized){
+        if (block) block(FPPermissionStatusAuthorized);
+    }
+}
++ (void)loacationAuthorizationShowAlertWhenDenied:(BOOL)alert permissionType:(FPPermissionType)type result:(CallBackBlock)block{
+    FPPermissionStatus status = [self mapStatus:type];
+    if (status == FPPermissionStatusNotDetermined) {
+        if (type == FPPermissionLocationAlways) {
+            static dispatch_once_t onceToken;
+            dispatch_once(&onceToken, ^{
+                [FPLocationManager.manager requestAlwaysAuthorization];
+            });
+        }else if(type == FPPermissionLocationWhenInUse){
+            static dispatch_once_t onceToken;
+            dispatch_once(&onceToken, ^{
+                [FPLocationManager.manager requestWhenInUseAuthorization];
+            });
+        }
+        [FPLocationObject startLocationWithDidChangeAuthorizationStatusBlock:^(CLAuthorizationStatus status) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (block) block([self mapStatus:type]);
+            });
+        }];
+    }else if (status == FPPermissionStatusDenied || status == FPPermissionStatusRestricted){
+        if(alert) [self manaulShowAuthorization:type];
+        if (block) block(status);
+    }else if (status == FPPermissionStatusAuthorized ||status == 
               FPPermissionStatusAuthorizedWhenUse){
         if (block) block(status);
     }
@@ -114,6 +144,17 @@ typedef void (^StatusBlock)(FPPermissionStatus);
         }else if (status == AVAuthorizationStatusDenied){
             return FPPermissionStatusDenied;
         }
+    }else if (type == FPPermissionMicrophone) {
+        AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeAudio];
+        if (status == AVAuthorizationStatusNotDetermined) {
+            return FPPermissionStatusNotDetermined;
+        }else if (status == AVAuthorizationStatusAuthorized){
+            return FPPermissionStatusAuthorized;
+        }else if (status == AVAuthorizationStatusRestricted){
+            return FPPermissionStatusRestricted;
+        }else if (status == AVAuthorizationStatusDenied){
+            return FPPermissionStatusDenied;
+        }
     }else if (type == FPPermissionPhoto){
         PHAuthorizationStatus status = [PHPhotoLibrary authorizationStatus];
         if (status == PHAuthorizationStatusNotDetermined) {
@@ -125,7 +166,7 @@ typedef void (^StatusBlock)(FPPermissionStatus);
         }else if (status == PHAuthorizationStatusDenied){
             return FPPermissionStatusDenied;
         }
-    }else if (type == FPPermissionLocation){
+    }else if (type == FPPermissionLocationWhenInUse || type == FPPermissionLocationAlways){
         CLAuthorizationStatus status =  [CLLocationManager authorizationStatus];
         if (status == kCLAuthorizationStatusNotDetermined) {
             return FPPermissionStatusNotDetermined;

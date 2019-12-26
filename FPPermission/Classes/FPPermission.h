@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 typedef NS_ENUM(NSInteger, FPPermissionType) {
     FPPermissionCamer = 0,
+    FPPermissionMicrophone,
     FPPermissionPhoto,
-    FPPermissionLocation,
+    FPPermissionLocationWhenInUse,
+    FPPermissionLocationAlways,
     FPPermissionBluetooth
 };
 typedef NS_ENUM(NSInteger, FPPermissionStatus) {
@@ -19,16 +21,20 @@ typedef NS_ENUM(NSInteger, FPPermissionStatus) {
     FPPermissionStatusAuthorized,
     FPPermissionStatusRestricted,
     FPPermissionStatusAuthorizedWhenUse,//定位特定多一个返回状态
-    FPPermissionStatusPoweredOff
+    FPPermissionStatusPoweredOff//蓝牙权限开启状态
 };
 #define kPermissionTitleInfo @{@(FPPermissionCamer):@"相机",\
                                @(FPPermissionPhoto):@"相册",\
-                                @(FPPermissionLocation):@"定位",\
+                                @(FPPermissionMicrophone):@"麦克风",\
+                                @(FPPermissionLocationWhenInUse):@"定位",\
+                                @(FPPermissionLocationAlways):@"定位",\
                                 @(FPPermissionBluetooth):@"蓝牙"}
 #define kPermissionDesInfo @{@(FPPermissionCamer):@"NSCameraUsageDescription",\
                              @(FPPermissionPhoto):@"NSPhotoLibraryUsageDescription",\
-                            @(FPPermissionLocation):@"NSLocationWhenInUseUsageDescription",\
-                            @(FPPermissionBluetooth):@"NSBluetoothPeripheralUsageDescription"}
+                             @(FPPermissionMicrophone):@"NSMicrophoneUsageDescription",\
+                             @(FPPermissionLocationAlways):@"NSLocationAlwaysUsageDescription",\
+                             @(FPPermissionLocationWhenInUse):@"NSLocationWhenInUseUsageDescription",\
+                             @(FPPermissionBluetooth):@"NSBluetoothPeripheralUsageDescription"}
 typedef void (^CallBackBlock)(FPPermissionStatus status);
 
 NS_ASSUME_NONNULL_BEGIN

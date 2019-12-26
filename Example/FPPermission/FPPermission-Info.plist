@@ -32,6 +32,8 @@
 	<string>使用蓝牙</string>
 	<key>NSCameraUsageDescription</key>
 	<string>访问相机</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>总允许访问定位</string>
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>使用定位</string>
 	<key>NSLocationWhenInUseUsageDescription</key>

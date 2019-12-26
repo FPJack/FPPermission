@@ -29,8 +29,6 @@
     if (self) {
         self.locationManager = [[CLLocationManager alloc] init];
         self.locationManager.delegate = self;
-        [self.locationManager requestWhenInUseAuthorization];
-        [self.locationManager requestAlwaysAuthorization];
         self.observers = [NSMutableArray array];
     }
     return self;
@@ -121,6 +119,13 @@
         }
     }
 }
+- (void)requestAlwaysAuthorization{
+    [self.locationManager requestAlwaysAuthorization];
+}
+- (void)requestWhenInUseAuthorization{
+    [self.locationManager requestWhenInUseAuthorization];
+}
+
 @end
 @interface FPLocationObject()
 @end
