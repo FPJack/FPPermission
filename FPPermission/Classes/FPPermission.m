@@ -141,17 +141,11 @@ typedef void (^StatusBlock)(FPPermissionStatus);
     FPPermissionStatus status = [self mapStatus:type];
     if (status == FPPermissionStatusNotDetermined) {
         if (type == FPPermissionLocationAlways) {
-            static dispatch_once_t onceToken;
-            dispatch_once(&onceToken, ^{
-                [FPLocationManager.manager requestAlwaysAuthorization];
-            });
+            [FPLocationManager.manager requestAlwaysAuthorization];
         }else if(type == FPPermissionLocationWhenInUse){
-            static dispatch_once_t onceToken;
-            dispatch_once(&onceToken, ^{
-                [FPLocationManager.manager requestWhenInUseAuthorization];
-            });
+            [FPLocationManager.manager requestWhenInUseAuthorization];
         }
-        [FPLocationObject startLocationWithDidChangeAuthorizationStatusBlock:^(CLAuthorizationStatus status) {
+        [FPLocationManager.manager startLocationWithDidChangeAuthorizationStatusBlock:^(CLAuthorizationStatus status) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (block) block([self mapStatus:type]);
             });
