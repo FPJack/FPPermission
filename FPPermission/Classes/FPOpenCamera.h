@@ -22,7 +22,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign)BOOL allowEditingVideo;
 @property (nonatomic, copy) void (^didFinishTakeVideoHandle)(UIImage *coverImage,PHAsset *asset,NSError *error);
 @property (nonatomic, copy) void (^didFinishTakePhotosHandle)(UIImage *image,NSDictionary *info,NSError *error);
-
 + (instancetype)share;
 - (void)openCameraFromVC:(UIViewController*)fromVC;
 @end

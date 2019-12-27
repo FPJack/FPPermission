@@ -76,18 +76,15 @@ typedef void (^StatusBlock)(FPPermissionStatus);
         if (block) block(FPPermissionStatusAuthorized);
     }
 }
-
 + (void)calendersAuthorizationShowAlertWhenDenied:(BOOL)alert result:(CallBackBlock)block{
     FPPermissionStatus status = [self mapStatus:FPPermissionCalendars];
     if (status == FPPermissionStatusNotDetermined) {
         EKEventStore *store = [[EKEventStore alloc] init];
-        if (store){
-            [store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError * _Nullable error) {
-                dispatch_async(dispatch_get_main_queue(), ^{
+        [store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError * _Nullable error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
                     if (block) block([self mapStatus:FPPermissionCalendars]);
-                });
-            }];
-        }
+            });
+        }];
     }else if (status == FPPermissionStatusDenied || status == FPPermissionStatusRestricted){
         if (alert) [self manaulShowAuthorization:FPPermissionCalendars];
         if (block) block(status);
@@ -95,7 +92,6 @@ typedef void (^StatusBlock)(FPPermissionStatus);
         if (block) block(FPPermissionStatusAuthorized);
     }
 }
-
 + (void)photoAuthorizationShowAlertWhenDenied:(BOOL)alert result:(CallBackBlock)block{
     FPPermissionStatus status = [self mapStatus:FPPermissionPhoto];
     if (status == FPPermissionStatusNotDetermined) {
@@ -298,8 +294,6 @@ typedef void (^StatusBlock)(FPPermissionStatus);
 }
 + (void)jumpAppSetting{
     NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-    if([[UIApplication sharedApplication] openURL:url]) {
-        [[UIApplication sharedApplication] openURL:url];
-    }
+    if([[UIApplication sharedApplication] openURL:url]) [[UIApplication sharedApplication] openURL:url];
 }
 @end
