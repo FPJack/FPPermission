@@ -13,6 +13,8 @@
 #import <AVFoundation/AVFoundation.h>
 #import "FPLocationManager.h"
 #import <UIKit/UIKit.h>
+#import <EventKit/EventKit.h>
+#import <Contacts/Contacts.h>
 typedef void (^StatusBlock)(FPPermissionStatus);
 @interface FPPermission()<CLLocationManagerDelegate>
 @property (nonatomic,strong)FPBlueToothDelegate *blueDelegate;
@@ -39,8 +41,61 @@ typedef void (^StatusBlock)(FPPermissionStatus);
         [self loacationAuthorizationShowAlertWhenDenied:alert permissionType:type result:block];
     }else if (type == FPPermissionBluetooth){
         [self bluetoothAuthorizationShowAlertWhenDenied:alert result:block];
+    }else if (type == FPPermissionCalendars){
+        [self calendersAuthorizationShowAlertWhenDenied:alert result:block];
+    }else if (type == FPPermissionContacts){
+        [self contactsAuthorizationShowAlertWhenDenied:alert result:block];
     }
 }
++ (void)contactsAuthorizationShowAlertWhenDenied:(BOOL)alert result:(CallBackBlock)block{
+    FPPermissionStatus status = [self mapStatus:FPPermissionContacts];
+    if (status == FPPermissionStatusNotDetermined) {
+        if (@available(iOS 9.0, *)) {
+            CNContactStore *contactStore = [[CNContactStore alloc] init];
+            [contactStore requestAccessForEntityType:CNEntityTypeContacts completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (block) block([self mapStatus:FPPermissionContacts]);
+                });
+            }];
+        }else{
+            __block ABAddressBookRef addressBookRef = ABAddressBookCreateWithOptions(NULL, NULL);
+            ABAddressBookRequestAccessWithCompletion(addressBookRef, ^(bool granted, CFErrorRef error) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (block) block([self mapStatus:FPPermissionContacts]);
+                    if (addressBookRef) {
+                        CFRelease(addressBookRef);
+                        addressBookRef = NULL;
+                    }
+                });
+            });
+        }
+    }else if (status == FPPermissionStatusDenied || status == FPPermissionStatusRestricted){
+        if (alert) [self manaulShowAuthorization:FPPermissionContacts];
+        if (block) block(status);
+    }else if (status == FPPermissionStatusAuthorized){
+        if (block) block(FPPermissionStatusAuthorized);
+    }
+}
+
++ (void)calendersAuthorizationShowAlertWhenDenied:(BOOL)alert result:(CallBackBlock)block{
+    FPPermissionStatus status = [self mapStatus:FPPermissionCalendars];
+    if (status == FPPermissionStatusNotDetermined) {
+        EKEventStore *store = [[EKEventStore alloc] init];
+        if (store){
+            [store requestAccessToEntityType:EKEntityTypeEvent completion:^(BOOL granted, NSError * _Nullable error) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (block) block([self mapStatus:FPPermissionCalendars]);
+                });
+            }];
+        }
+    }else if (status == FPPermissionStatusDenied || status == FPPermissionStatusRestricted){
+        if (alert) [self manaulShowAuthorization:FPPermissionCalendars];
+        if (block) block(status);
+    }else if (status == FPPermissionStatusAuthorized){
+        if (block) block(FPPermissionStatusAuthorized);
+    }
+}
+
 + (void)photoAuthorizationShowAlertWhenDenied:(BOOL)alert result:(CallBackBlock)block{
     FPPermissionStatus status = [self mapStatus:FPPermissionPhoto];
     if (status == FPPermissionStatusNotDetermined) {
@@ -108,7 +163,7 @@ typedef void (^StatusBlock)(FPPermissionStatus);
     }else if (status == FPPermissionStatusDenied || status == FPPermissionStatusRestricted){
         if(alert) [self manaulShowAuthorization:type];
         if (block) block(status);
-    }else if (status == FPPermissionStatusAuthorized ||status == 
+    }else if (status == FPPermissionStatusAuthorized ||status ==
               FPPermissionStatusAuthorizedWhenUse){
         if (block) block(status);
     }
@@ -131,7 +186,6 @@ typedef void (^StatusBlock)(FPPermissionStatus);
         }
     }];
 }
-
 + (FPPermissionStatus)mapStatus:(FPPermissionType)type{
     if (type == FPPermissionCamer) {
         AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
@@ -184,6 +238,43 @@ typedef void (^StatusBlock)(FPPermissionStatus);
     }else if (type == FPPermissionBluetooth){
         
         return [FPBlueToothDelegate status];
+    }else if (type == FPPermissionCalendars){
+        EKAuthorizationStatus status = [EKEventStore authorizationStatusForEntityType:EKEntityTypeEvent];
+        if (status == EKAuthorizationStatusNotDetermined) {
+            return FPPermissionStatusNotDetermined;
+        }else if (status == EKAuthorizationStatusRestricted){
+            return FPPermissionStatusRestricted;
+        }else if (status == EKAuthorizationStatusDenied){
+            return FPPermissionStatusDenied;
+        }else if (status == EKAuthorizationStatusAuthorized){
+            return FPPermissionStatusAuthorized;
+        }
+    }else if (type == FPPermissionContacts){
+        if (@available(iOS 9.0, *)) {
+            CNAuthorizationStatus status = [CNContactStore authorizationStatusForEntityType:CNEntityTypeContacts];
+            if (status == CNAuthorizationStatusNotDetermined) {
+                return FPPermissionStatusNotDetermined;
+            }else if (status == CNAuthorizationStatusAuthorized){
+                return FPPermissionStatusAuthorized;
+            }else if (status == CNAuthorizationStatusDenied) {
+                return FPPermissionStatusDenied;
+            }else if(status == CNAuthorizationStatusRestricted){
+                return FPPermissionStatusRestricted;
+            }
+        } else {
+            // Fallback on earlier versions
+            //ios 9.0 之前版本
+            ABAuthorizationStatus status = ABAddressBookGetAuthorizationStatus();
+            if (status == kABAuthorizationStatusNotDetermined) {
+                return FPPermissionStatusNotDetermined;
+            }else if (status == kABAuthorizationStatusAuthorized){
+                return FPPermissionStatusAuthorized;
+            }else if (status == kABAuthorizationStatusDenied) {
+                return FPPermissionStatusDenied;
+            }else if(status == kABAuthorizationStatusRestricted){
+                return FPPermissionStatusRestricted;
+            }
+        }
     }
     return FPPermissionStatusNotDetermined;
 }
@@ -201,7 +292,7 @@ typedef void (^StatusBlock)(FPPermissionStatus);
     }];
     [alertVC addAction:ac1];
     [alertVC addAction:ac2];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertVC animated:YES completion:nil];
     });
 }

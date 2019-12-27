@@ -30,8 +30,12 @@
 	<string>使用蓝牙</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>使用蓝牙</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>访问日历</string>
 	<key>NSCameraUsageDescription</key>
 	<string>访问相机</string>
+	<key>NSContactsUsageDescription</key>
+	<string>访问通讯录</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>总允许访问定位</string>
 	<key>NSLocationAlwaysUsageDescription</key>

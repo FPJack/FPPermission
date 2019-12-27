@@ -11,11 +11,10 @@
 #endif
 
 #import "FPBlueToothDelegate.h"
-#import "FPLocationDelegate.h"
+#import "FPLocationManager.h"
 #import "FPOpenCamera.h"
 #import "FPPermission.h"
 #import "FPVideoEditVC.h"
-#import "FPLocationManager.h"
 
 FOUNDATION_EXPORT double FPPermissionVersionNumber;
 FOUNDATION_EXPORT const unsigned char FPPermissionVersionString[];

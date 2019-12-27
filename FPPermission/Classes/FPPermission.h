@@ -10,6 +10,8 @@
 typedef NS_ENUM(NSInteger, FPPermissionType) {
     FPPermissionCamer = 0,
     FPPermissionMicrophone,
+    FPPermissionCalendars,
+    FPPermissionContacts,
     FPPermissionPhoto,
     FPPermissionLocationWhenInUse,
     FPPermissionLocationAlways,
@@ -28,10 +30,14 @@ typedef NS_ENUM(NSInteger, FPPermissionStatus) {
                                 @(FPPermissionMicrophone):@"麦克风",\
                                 @(FPPermissionLocationWhenInUse):@"定位",\
                                 @(FPPermissionLocationAlways):@"定位",\
+                                @(FPPermissionCalendars):@"日历",\
+                                @(FPPermissionContacts):@"通讯录",\
                                 @(FPPermissionBluetooth):@"蓝牙"}
 #define kPermissionDesInfo @{@(FPPermissionCamer):@"NSCameraUsageDescription",\
                              @(FPPermissionPhoto):@"NSPhotoLibraryUsageDescription",\
                              @(FPPermissionMicrophone):@"NSMicrophoneUsageDescription",\
+                             @(FPPermissionCalendars):@"NSCalendarsUsageDescription",\
+                             @(FPPermissionContacts):@"NSContactsUsageDescription",\
                              @(FPPermissionLocationAlways):@"NSLocationAlwaysUsageDescription",\
                              @(FPPermissionLocationWhenInUse):@"NSLocationWhenInUseUsageDescription",\
                              @(FPPermissionBluetooth):@"NSBluetoothPeripheralUsageDescription"}
