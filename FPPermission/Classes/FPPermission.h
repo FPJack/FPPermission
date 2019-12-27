@@ -25,7 +25,7 @@ typedef NS_ENUM(NSInteger, FPPermissionStatus) {
     FPPermissionStatusAuthorizedWhenUse,//定位特定多一个返回状态
     FPPermissionStatusPoweredOff//蓝牙权限开启状态
 };
-#define kPermissionTitleInfo @{@(FPPermissionCamer):@"相机",\
+#define kFPPermissionTitleInfo @{@(FPPermissionCamer):@"相机",\
                                @(FPPermissionPhoto):@"相册",\
                                 @(FPPermissionMicrophone):@"麦克风",\
                                 @(FPPermissionLocationWhenInUse):@"定位",\
@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, FPPermissionStatus) {
                                 @(FPPermissionCalendars):@"日历",\
                                 @(FPPermissionContacts):@"通讯录",\
                                 @(FPPermissionBluetooth):@"蓝牙"}
-#define kPermissionDesInfo @{@(FPPermissionCamer):@"NSCameraUsageDescription",\
+#define kFPPermissionDesInfo @{@(FPPermissionCamer):@"NSCameraUsageDescription",\
                              @(FPPermissionPhoto):@"NSPhotoLibraryUsageDescription",\
                              @(FPPermissionMicrophone):@"NSMicrophoneUsageDescription",\
                              @(FPPermissionCalendars):@"NSCalendarsUsageDescription",\

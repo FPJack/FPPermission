@@ -277,9 +277,9 @@ typedef void (^StatusBlock)(FPPermissionStatus);
 
 #pragma mark -跳权限设置界面
 + (void)manaulShowAuthorization:(FPPermissionType)type{
-    NSString *title = [NSString stringWithFormat:@"允许访问你的%@",kPermissionTitleInfo[@(type)]];
+    NSString *title = [NSString stringWithFormat:@"允许访问你的%@",kFPPermissionTitleInfo[@(type)]];
     NSDictionary* infoDic = [[NSBundle mainBundle] infoDictionary];
-    NSString *des = [NSString stringWithFormat:@"更好的使用APP%@",infoDic[kPermissionDesInfo[@(type)]]];
+    NSString *des = [NSString stringWithFormat:@"更好的使用APP%@",infoDic[kFPPermissionDesInfo[@(type)]]];
     UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:des preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *ac1 = [UIAlertAction actionWithTitle:@"否" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
     }];
