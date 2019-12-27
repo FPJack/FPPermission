@@ -28,7 +28,7 @@ typedef void (^StatusBlock)(FPPermissionStatus);
     });
     return permission;
 }
-+ (void)requestAuthorizationStatus:(FPPermissionType)type showAlertWhenDenied:(BOOL)alert resultBlock:(CallBackBlock)block{
++ (void)requestAuthorizationStatus:(FPPermissionType)type showAlertWhenDenied:(BOOL)alert resultBlock:(FPCallBackBlock)block{
     if (type == FPPermissionCamer) {
         [self cameraAuthorizationShowAlertWhenDenied:alert result:block];
     }else if (type == FPPermissionPhoto){
@@ -47,7 +47,7 @@ typedef void (^StatusBlock)(FPPermissionStatus);
         [self contactsAuthorizationShowAlertWhenDenied:alert result:block];
     }
 }
-+ (void)contactsAuthorizationShowAlertWhenDenied:(BOOL)alert result:(CallBackBlock)block{
++ (void)contactsAuthorizationShowAlertWhenDenied:(BOOL)alert result:(FPCallBackBlock)block{
     FPPermissionStatus status = [self mapStatus:FPPermissionContacts];
     if (status == FPPermissionStatusNotDetermined) {
         if (@available(iOS 9.0, *)) {
@@ -76,7 +76,7 @@ typedef void (^StatusBlock)(FPPermissionStatus);
         if (block) block(FPPermissionStatusAuthorized);
     }
 }
-+ (void)calendersAuthorizationShowAlertWhenDenied:(BOOL)alert result:(CallBackBlock)block{
++ (void)calendersAuthorizationShowAlertWhenDenied:(BOOL)alert result:(FPCallBackBlock)block{
     FPPermissionStatus status = [self mapStatus:FPPermissionCalendars];
     if (status == FPPermissionStatusNotDetermined) {
         EKEventStore *store = [[EKEventStore alloc] init];
@@ -92,7 +92,7 @@ typedef void (^StatusBlock)(FPPermissionStatus);
         if (block) block(FPPermissionStatusAuthorized);
     }
 }
-+ (void)photoAuthorizationShowAlertWhenDenied:(BOOL)alert result:(CallBackBlock)block{
++ (void)photoAuthorizationShowAlertWhenDenied:(BOOL)alert result:(FPCallBackBlock)block{
     FPPermissionStatus status = [self mapStatus:FPPermissionPhoto];
     if (status == FPPermissionStatusNotDetermined) {
         [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
@@ -107,7 +107,7 @@ typedef void (^StatusBlock)(FPPermissionStatus);
         if (block) block(FPPermissionStatusAuthorized);
     }
 }
-+ (void)cameraAuthorizationShowAlertWhenDenied:(BOOL)alert result:(CallBackBlock)block{
++ (void)cameraAuthorizationShowAlertWhenDenied:(BOOL)alert result:(FPCallBackBlock)block{
     FPPermissionStatus status = [self mapStatus:FPPermissionCamer];
     if (status == FPPermissionStatusNotDetermined) {
         [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
@@ -122,7 +122,7 @@ typedef void (^StatusBlock)(FPPermissionStatus);
         if (block) block(FPPermissionStatusAuthorized);
     }
 }
-+ (void)microphoneAuthorizationShowAlertWhenDenied:(BOOL)alert result:(CallBackBlock)block{
++ (void)microphoneAuthorizationShowAlertWhenDenied:(BOOL)alert result:(FPCallBackBlock)block{
     FPPermissionStatus status = [self mapStatus:FPPermissionMicrophone];
     if (status == FPPermissionStatusNotDetermined) {
         [AVCaptureDevice requestAccessForMediaType:AVMediaTypeAudio completionHandler:^(BOOL granted) {
@@ -137,7 +137,7 @@ typedef void (^StatusBlock)(FPPermissionStatus);
         if (block) block(FPPermissionStatusAuthorized);
     }
 }
-+ (void)loacationAuthorizationShowAlertWhenDenied:(BOOL)alert permissionType:(FPPermissionType)type result:(CallBackBlock)block{
++ (void)loacationAuthorizationShowAlertWhenDenied:(BOOL)alert permissionType:(FPPermissionType)type result:(FPCallBackBlock)block{
     FPPermissionStatus status = [self mapStatus:type];
     if (status == FPPermissionStatusNotDetermined) {
         if (type == FPPermissionLocationAlways) {
@@ -158,7 +158,7 @@ typedef void (^StatusBlock)(FPPermissionStatus);
         if (block) block(status);
     }
 }
-+ (void)bluetoothAuthorizationShowAlertWhenDenied:(BOOL)alert result:(CallBackBlock)block{
++ (void)bluetoothAuthorizationShowAlertWhenDenied:(BOOL)alert result:(FPCallBackBlock)block{
     [FPPermission share].blueDelegate = [FPBlueToothDelegate FPBlueToothDelegateBlock:^(CBPeripheralManagerState state) {
         switch (state) {
             case CBPeripheralManagerStatePoweredOff:

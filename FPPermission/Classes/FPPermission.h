@@ -41,11 +41,11 @@ typedef NS_ENUM(NSInteger, FPPermissionStatus) {
                              @(FPPermissionLocationAlways):@"NSLocationAlwaysUsageDescription",\
                              @(FPPermissionLocationWhenInUse):@"NSLocationWhenInUseUsageDescription",\
                              @(FPPermissionBluetooth):@"NSBluetoothPeripheralUsageDescription"}
-typedef void (^CallBackBlock)(FPPermissionStatus status);
+typedef void (^FPCallBackBlock)(FPPermissionStatus status);
 
 NS_ASSUME_NONNULL_BEGIN
 @interface FPPermission : NSObject
-+ (void)requestAuthorizationStatus:(FPPermissionType)type showAlertWhenDenied:(BOOL)alert resultBlock:(CallBackBlock)block;
++ (void)requestAuthorizationStatus:(FPPermissionType)type showAlertWhenDenied:(BOOL)alert resultBlock:(FPCallBackBlock)block;
 + (FPPermissionStatus)mapStatus:(FPPermissionType)type;
 + (void)jumpAppSetting;
 @end
