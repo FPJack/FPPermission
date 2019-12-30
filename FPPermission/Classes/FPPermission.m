@@ -140,21 +140,24 @@ typedef void (^StatusBlock)(FPPermissionStatus);
 + (void)loacationAuthorizationShowAlertWhenDenied:(BOOL)alert permissionType:(FPPermissionType)type result:(FPCallBackBlock)block{
     FPPermissionStatus status = [self mapStatus:type];
     if (status == FPPermissionStatusNotDetermined) {
-        if (type == FPPermissionLocationAlways) {
-            [FPLocationManager.manager requestAlwaysAuthorization];
-        }else if(type == FPPermissionLocationWhenInUse){
-            [FPLocationManager.manager requestWhenInUseAuthorization];
-        }
         [FPLocationManager.manager startLocationWithDidChangeAuthorizationStatusBlock:^(CLAuthorizationStatus status) {
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (block) block([self mapStatus:type]);
             });
         }];
+        if (type == FPPermissionLocationAlways) {
+            [FPLocationManager.manager requestAlwaysAuthorization];
+        }else if(type == FPPermissionLocationWhenInUse){
+            [FPLocationManager.manager requestWhenInUseAuthorization];
+        }
     }else if (status == FPPermissionStatusDenied || status == FPPermissionStatusRestricted){
         if(alert) [self manaulShowAuthorization:type];
         if (block) block(status);
     }else if (status == FPPermissionStatusAuthorized ||status ==
               FPPermissionStatusAuthorizedWhenUse){
+        if (block) block(status);
+    }else if (status == FPPermissionStatusPoweredOff){
+        if (alert) [self showAlertMessage:type];
         if (block) block(status);
     }
 }
@@ -162,13 +165,14 @@ typedef void (^StatusBlock)(FPPermissionStatus);
     [FPPermission share].blueDelegate = [FPBlueToothDelegate FPBlueToothDelegateBlock:^(CBPeripheralManagerState state) {
         switch (state) {
             case CBPeripheralManagerStatePoweredOff:
+                if (alert) [self showAlertMessage:FPPermissionBluetooth];
                 if (block) block(FPPermissionStatusPoweredOff);
                 break;
             case CBPeripheralManagerStatePoweredOn:
                 if (block) block([self mapStatus:FPPermissionBluetooth]);
                 break;
             case CBPeripheralManagerStateUnauthorized:
-                if(alert) [self manaulShowAuthorization:FPPermissionBluetooth];
+//              if(alert) [self manaulShowAuthorization:FPPermissionBluetooth];
                 if (block) block([self mapStatus:FPPermissionBluetooth]);
                 break;
             default:
@@ -211,6 +215,7 @@ typedef void (^StatusBlock)(FPPermissionStatus);
             return FPPermissionStatusDenied;
         }
     }else if (type == FPPermissionLocationWhenInUse || type == FPPermissionLocationAlways){
+        if (![CLLocationManager locationServicesEnabled]) return FPPermissionStatusPoweredOff;
         CLAuthorizationStatus status =  [CLLocationManager authorizationStatus];
         if (status == kCLAuthorizationStatusNotDetermined) {
             return FPPermissionStatusNotDetermined;
@@ -218,10 +223,8 @@ typedef void (^StatusBlock)(FPPermissionStatus);
             return FPPermissionStatusRestricted;
         }else if (status == kCLAuthorizationStatusDenied){
             return FPPermissionStatusDenied;
-            
         }else if (status == kCLAuthorizationStatusAuthorizedAlways){
             return FPPermissionStatusAuthorized;
-            
         }else if (status == kCLAuthorizationStatusAuthorizedWhenInUse){
             return FPPermissionStatusAuthorizedWhenUse;
         }
@@ -270,6 +273,25 @@ typedef void (^StatusBlock)(FPPermissionStatus);
 }
 
 #pragma mark -跳权限设置界面
++ (void)showAlertMessage:(FPPermissionType)type{
+    NSString *title;
+    NSString *message;
+    if (type == FPPermissionLocationAlways || type == FPPermissionLocationWhenInUse) {
+        title = @"手机定位功能已关闭";
+        message = @"请前往->设置->隐私->开启定位功能";
+    }else if (type == FPPermissionBluetooth){
+        title = @"手机蓝牙功能已关闭";
+        message = @"请前往->设置->蓝牙->开启蓝牙功能";
+    }
+    UIAlertController *alertVC = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *ac1 = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    }];
+    [alertVC addAction:ac1];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:alertVC animated:YES completion:nil];
+    });
+
+}
 + (void)manaulShowAuthorization:(FPPermissionType)type{
     NSString *title = [NSString stringWithFormat:@"允许访问你的%@",kFPPermissionTitleInfo[@(type)]];
     NSDictionary* infoDic = [[NSBundle mainBundle] infoDictionary];

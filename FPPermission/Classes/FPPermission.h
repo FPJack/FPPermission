@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger, FPPermissionStatus) {
     FPPermissionStatusAuthorized,
     FPPermissionStatusRestricted,
     FPPermissionStatusAuthorizedWhenUse,//定位特定多一个返回状态
-    FPPermissionStatusPoweredOff//蓝牙权限开启状态
+    FPPermissionStatusPoweredOff//蓝牙定位手机权限关闭状态
 };
 #define kFPPermissionTitleInfo @{@(FPPermissionCamer):@"相机",\
                                @(FPPermissionPhoto):@"相册",\

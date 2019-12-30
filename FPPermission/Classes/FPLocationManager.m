@@ -131,40 +131,20 @@
     obj.failureBlock = failureBlock;
     obj.geocodeBlock = geocoderBlock;
     [self startLocationObserver:obj];
-
 }
 - (void)startLocationWithGeocoderBlock:(void (^)(NSArray *geocoderArray,LocationModel *locationModel))geocoderBlock failureBlock:(void (^)(NSError *error))failureBlock{
     FPLocationObject *obj = [FPLocationObject new];
     obj.failureBlock = failureBlock;
     obj.geocodeBlock = geocoderBlock;
     [self startLocationObserver:obj];
-
 }
 - (void)startLocationWithDidChangeAuthorizationStatusBlock:(void (^)(CLAuthorizationStatus status))didChangeAuthorizationStatusBlock{
     FPLocationObject *obj = [FPLocationObject new];
     obj.didChangeAuthorizationStatusBlock = didChangeAuthorizationStatusBlock;
-    [self startLocationObserver:obj];
+    @synchronized (self) {[self.observers addObject:obj];}
 }
 @end
 @interface FPLocationObject()
 @end
 @implementation FPLocationObject
-//+ (void)startLocationWithSuccessBlock:(void (^)(NSArray<CLLocation *> *locations))successBlock failureBlock:(void (^)(NSError *error))failureBlock geocoderBlock:(void (^)(NSArray *geocoderArray,LocationModel *locationModel))geocoderBlock{
-//    FPLocationObject *obj = [FPLocationObject new];
-//    obj.successBlock = successBlock;
-//    obj.failureBlock = failureBlock;
-//    obj.geocodeBlock = geocoderBlock;
-//    [FPLocationManager.manager startLocationObserver:obj];
-//}
-//+ (void)startLocationWithGeocoderBlock:(void (^)(NSArray *geocoderArray,LocationModel *locationModel))geocoderBlock failureBlock:(void (^)(NSError *error))failureBlock{
-//    FPLocationObject *obj = [FPLocationObject new];
-//    obj.failureBlock = failureBlock;
-//    obj.geocodeBlock = geocoderBlock;
-//    [FPLocationManager.manager startLocationObserver:obj];
-//}
-//+ (void)startLocationWithDidChangeAuthorizationStatusBlock:(void (^)(CLAuthorizationStatus status))didChangeAuthorizationStatusBlock{
-//    FPLocationObject *obj = [FPLocationObject new];
-//    obj.didChangeAuthorizationStatusBlock = didChangeAuthorizationStatusBlock;
-//    [FPLocationManager.manager startLocationObserver:obj];
-//}
 @end

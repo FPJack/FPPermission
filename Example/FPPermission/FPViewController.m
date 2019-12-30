@@ -8,6 +8,7 @@
 
 #import "FPViewController.h"
 #import <FPPermission.h>
+#import <FPLocationManager.h>
 @interface FPViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic,strong)NSArray *sources;
@@ -33,7 +34,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSNumber *type = self.sources[indexPath.row];
     [FPPermission requestAuthorizationStatus:type.intValue showAlertWhenDenied:YES resultBlock:^(FPPermissionStatus status) {
-        
+        if (status != FPPermissionStatusAuthorized) return ;
+        [FPLocationManager.manager startLocationWithGeocoderBlock:^(NSArray *geocoderArray, LocationModel *locationModel) {
+            
+        } failureBlock:^(NSError *error) {
+            
+        }];
     }];
 }
 @end

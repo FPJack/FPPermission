@@ -46,7 +46,4 @@
 /// 权限改变的回调block
 @property (nonatomic, copy) void (^didChangeAuthorizationStatusBlock)(CLAuthorizationStatus status);
 
-//+ (void)startLocationWithSuccessBlock:(void (^)(NSArray<CLLocation *> *locations))successBlock failureBlock:(void (^)(NSError *error))failureBlock geocoderBlock:(void (^)(NSArray *geocoderArray,LocationModel *locationModel))geocoderBlock;
-//+ (void)startLocationWithGeocoderBlock:(void (^)(NSArray *geocoderArray,LocationModel *locationModel))geocoderBlock failureBlock:(void (^)(NSError *error))failureBlock;
-//+ (void)startLocationWithDidChangeAuthorizationStatusBlock:(void (^)(CLAuthorizationStatus status))didChangeAuthorizationStatusBlock;
 @end
